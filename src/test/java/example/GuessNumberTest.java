@@ -140,4 +140,5 @@ public class GuessNumberTest {
         //then
         assertEquals(false,result);
     }
+
 }
