@@ -11,25 +11,27 @@ public class GuessNumebr {
     }
 
     public String guess(int[] inputGuess) {
-        if(isAllCorrect(inputGuess, answer)){
-            return "4A0B";
-        }
-        if(getAcountOfB(inputGuess)==0){
-            return "0A0B";
-        }
-        if(getAcountOfA(inputGuess)==2 && getAcountOfB(inputGuess)==2){
-            return "2A0B";
-        }
-        if(getAcountOfA(inputGuess)==0 && getAcountOfB(inputGuess)==4){
-            return "0A4B";
-        }
-        if(getAcountOfA(inputGuess)==2 && getAcountOfB(inputGuess)==4){
-            return "2A2B";
-        }
-        if(getAcountOfA(inputGuess)==1 && getAcountOfB(inputGuess)==2){
-            return "1A1B";
-        }
-        return null;
+        String result = "";
+        result = getAcountOfA(inputGuess)+"A"+(getAcountOfB(inputGuess)-getAcountOfA(inputGuess))+"B";
+//        if(isAllCorrect(inputGuess, answer)){
+//            return "4A0B";
+//        }
+//        if(getAcountOfB(inputGuess)==0){
+//            return "0A0B";
+//        }
+//        if(getAcountOfA(inputGuess)==2 && getAcountOfB(inputGuess)==2){
+//            return "2A0B";
+//        }
+//        if(getAcountOfA(inputGuess)==0 && getAcountOfB(inputGuess)==4){
+//            return "0A4B";
+//        }
+//        if(getAcountOfA(inputGuess)==2 && getAcountOfB(inputGuess)==4){
+//            return "2A2B";
+//        }
+//        if(getAcountOfA(inputGuess)==1 && getAcountOfB(inputGuess)==2){
+//            return "1A1B";
+//        }
+        return result;
     }
     public boolean isAllCorrect(int[] inputGuess,int[] answer){
         for (int index=0;index!=(inputGuess.length<answer.length?inputGuess.length:answer.length);index++){
