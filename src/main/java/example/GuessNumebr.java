@@ -61,4 +61,7 @@ public class GuessNumebr {
         return accountOfA;
     }
 
+    public boolean isLegal(int[] inputGuess) {
+        return false;
+    }
 }
