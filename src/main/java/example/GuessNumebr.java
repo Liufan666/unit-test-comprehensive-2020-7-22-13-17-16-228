@@ -62,6 +62,9 @@ public class GuessNumebr {
     }
 
     public boolean isLegal(int[] inputGuess) {
+        if(inputGuess.length==4){
+            return true;
+        }
         return false;
     }
 }
