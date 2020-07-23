@@ -63,7 +63,19 @@ public class GuessNumebr {
 
     public boolean isLegal(int[] inputGuess) {
         if(inputGuess.length==4){
-            return true;
+            if(!isRepeat(inputGuess)){
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean isRepeat(int[] inputGuess){
+        for(int index1=0;index1<inputGuess.length-1;index1++){
+            for (int index2=index1+1;index2<inputGuess.length;index2++){
+                if(inputGuess[index1]==inputGuess[index2]){
+                    return true;
+                }
+            }
         }
         return false;
     }
