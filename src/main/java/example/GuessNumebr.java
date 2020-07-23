@@ -3,7 +3,13 @@ package example;
 
 
 public class GuessNumebr {
-    public String guess(int[] inputGuess, int[] answer) {
+    private int[] answer;
+
+    public GuessNumebr(AnswerGenerator answerGenerator) {
+        this.answer = answerGenerator.generate();
+    }
+
+    public String guess(int[] inputGuess) {
         if(isAllCorrect(inputGuess, answer)){
             return "4A0B";
         }
