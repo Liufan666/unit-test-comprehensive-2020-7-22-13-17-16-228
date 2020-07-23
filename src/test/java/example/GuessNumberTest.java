@@ -112,4 +112,18 @@ public class GuessNumberTest {
         //then
         assertEquals(true,result);
     }
+    @Test
+    void should_return_false_when_isLegal_given_input_guess_123(){
+        //given
+        int[] answer = {1,2,3,4};
+        AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
+
+        when(answerGenerator.generate()).thenReturn(answer);
+        GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
+        int[] inputGuess = {1,2,3};
+        //when
+        boolean result = guessNumebr.isLegal(inputGuess);
+        //then
+        assertEquals(false,result);
+    }
 }
