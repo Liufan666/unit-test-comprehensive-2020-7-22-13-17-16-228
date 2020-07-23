@@ -23,6 +23,9 @@ public class GuessNumebr {
         if(getAcountOfA(inputGuess)==0 && getAcountOfB(inputGuess)==4){
             return "0A4B";
         }
+        if(getAcountOfA(inputGuess)==2 && getAcountOfB(inputGuess)==4){
+            return "2A2B";
+        }
         return null;
     }
     public boolean isAllCorrect(int[] inputGuess,int[] answer){
