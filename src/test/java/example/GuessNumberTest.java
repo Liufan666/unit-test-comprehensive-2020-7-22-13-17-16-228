@@ -26,13 +26,13 @@ public class GuessNumberTest {
     @Test
     void should_return_0A0B_when_guess_given_answer_1234_and_input_guess_5678(){
         //given
-        int[] answer = {5,6,7,8};
+        int[] answer = {1,2,3,4};
 
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
 
         when(answerGenerator.generate()).thenReturn(answer);
         GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
-        int[] inputGuess = {1,2,3,4};
+        int[] inputGuess = {5,6,7,8};
         //when
         String result = guessNumebr.guess(inputGuess);
         //then
@@ -41,7 +41,7 @@ public class GuessNumberTest {
     @Test
     void should_return_2A0B_when_guess_given_answer_1234_and_input_guess_1256(){
         //given
-        int[] answer = {5,6,7,8};
+        int[] answer = {1,2,3,4};
 
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
 

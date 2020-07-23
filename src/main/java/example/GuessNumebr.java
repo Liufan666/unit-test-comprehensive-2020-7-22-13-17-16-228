@@ -17,6 +17,9 @@ public class GuessNumebr {
         if(getAcountOfB(inputGuess)==0){
             return "0A0B";
         }
+        if(getAcountOfA(inputGuess)==2 && getAcountOfB(inputGuess)==2){
+            return "2A0B";
+        }
         return null;
     }
     public boolean isAllCorrect(int[] inputGuess,int[] answer){
@@ -40,13 +43,13 @@ public class GuessNumebr {
 
     }
 
-//    public int getAcountOfA(int[] inputGuess,int[] answer){
-//        int accountOfA = 0;
-//        for (int index=0;index!=(inputGuess.length<answer.length?inputGuess.length:answer.length);index++)
-//            if (inputGuess[index]==(answer[index])){
-//                accountOfA++;
-//            }
-//        return accountOfA;
-//    }
+    public int getAcountOfA(int[] inputGuess){
+        int accountOfA = 0;
+        for (int index=0;index!=(inputGuess.length<answer.length?inputGuess.length:answer.length);index++)
+            if (inputGuess[index]==(answer[index])){
+                accountOfA++;
+            }
+        return accountOfA;
+    }
 
 }
