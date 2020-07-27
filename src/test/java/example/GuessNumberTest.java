@@ -140,5 +140,16 @@ public class GuessNumberTest {
         //then
         assertFalse(result);
     }
+    @Test
+    void should_return_true_when_isLegal_given_answer_by_generate(){
+        //given
+        AnswerGenerator answerGenerator = new AnswerGenerator();
+        int[] answer = answerGenerator.generate();
+        GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
+        //when
+        boolean result = guessNumebr.isLegal(answer);
+        //then
+        assertTrue(result);
+    }
 
 }
