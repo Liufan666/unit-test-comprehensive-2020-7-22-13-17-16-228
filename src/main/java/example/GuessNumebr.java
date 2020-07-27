@@ -32,10 +32,11 @@ public class GuessNumebr {
 
     public int getAcountOfA(int[] inputGuess){
         int accountOfA = 0;
-        for (int index=0;index<(inputGuess.length<answer.length?inputGuess.length:answer.length);index++)
+        for (int index=0;index<(inputGuess.length<answer.length?inputGuess.length:answer.length);index++){
             if (inputGuess[index]==(answer[index])){
                 accountOfA++;
             }
+        }
         return accountOfA;
     }
 
