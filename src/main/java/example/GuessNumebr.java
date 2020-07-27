@@ -15,12 +15,6 @@ public class GuessNumebr {
         result = getAcountOfA(inputGuess)+"A"+(getAcountOfB(inputGuess)-getAcountOfA(inputGuess))+"B";
         return result;
     }
-    public boolean isAllCorrect(int[] inputGuess,int[] answer){
-        for (int index=0;index!=(inputGuess.length<answer.length?inputGuess.length:answer.length);index++){
-            if (inputGuess[index]!=(answer[index])) return false;
-        }
-        return true;
-    }
     public int getAcountOfB(int[] inputGuess){
         List list = new LinkedList();
         int accountOfB = 0;
