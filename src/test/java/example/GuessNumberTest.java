@@ -4,8 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import org.mockito.Mockito;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 public class GuessNumberTest {
@@ -112,7 +111,6 @@ public class GuessNumberTest {
         boolean result = guessNumebr.isLegal(inputGuess);
         //then
         assertTrue(result);
-        //assertEquals(true,result);
     }
     @Test
     void should_return_false_when_isLegal_given_input_guess_123(){
@@ -126,7 +124,7 @@ public class GuessNumberTest {
         //when
         boolean result = guessNumebr.isLegal(inputGuess);
         //then
-        assertEquals(false,result);
+        assertFalse(result);
     }
     @Test
     void should_return_false_when_isLegal_given_input_guess_1233(){
@@ -140,7 +138,7 @@ public class GuessNumberTest {
         //when
         boolean result = guessNumebr.isLegal(inputGuess);
         //then
-        assertEquals(false,result);
+        assertFalse(result);
     }
 
 }
