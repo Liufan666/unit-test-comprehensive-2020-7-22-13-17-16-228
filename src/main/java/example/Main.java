@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
         for(int time=0;time<6;time++){
-            Scanner sc = new Scanner(System.in);
+
 
             String str = sc.nextLine().toString();
             String arr[] = str.split(" ");
@@ -25,6 +25,7 @@ public class Main {
             }
 
         }
+        sc.close();
 
 
     }
