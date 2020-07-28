@@ -13,14 +13,14 @@ public class GuessNumebr {
     public String guess(int[] inputGuess) {
         String result = "";
         result = getAcountOfA(inputGuess) + "A" + (getAcountOfB(inputGuess) - getAcountOfA(inputGuess)) + "B";
-        return result;
+        return result;//todo
     }
 
-    public int getAcountOfB(int[] inputGuess) {
-        List list = new LinkedList();
+    public int getAcountOfB(int[] inputGuess) {//todo
+        List list = new LinkedList();//todo
         int accountOfB = 0;
         for (int index = 0; index < answer.length; index++) {
-            list.add(answer[index]);
+            list.add(answer[index]);//todo Arrays.asList
         }
         for (int index = 0; index < inputGuess.length; index++) {
             if (list.contains(inputGuess[index])) {
@@ -33,7 +33,7 @@ public class GuessNumebr {
 
     public int getAcountOfA(int[] inputGuess) {
         int accountOfA = 0;
-        for (int index = 0; index < (inputGuess.length < answer.length ? inputGuess.length : answer.length); index++) {
+        for (int index = 0; index < (Math.min(inputGuess.length, answer.length)); index++) {//todo
             if (inputGuess[index] == answer[index]) {
                 accountOfA++;
             }
@@ -42,15 +42,12 @@ public class GuessNumebr {
     }
 
     public boolean isLegal(int[] inputGuess) {
-        if (inputGuess.length == 4 && !isRepeat(inputGuess)) {
 
-            return true;
-        }
-        return false;
+        return inputGuess.length == 4 && !isRepeat(inputGuess);
     }
 
     public boolean isRepeat(int[] inputGuess) {
-        for (int index1 = 0; index1 < inputGuess.length - 1; index1++) {
+        for (int index1 = 0; index1 < inputGuess.length - 1; index1++) {//todo hashest
             for (int index2 = index1 + 1; index2 < inputGuess.length; index2++) {
                 if (inputGuess[index1] == inputGuess[index2]) {
                     return true;

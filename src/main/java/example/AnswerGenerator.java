@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class AnswerGenerator {
-    public int[] generate() {
+    public int[] generate() {//todo
         List list = new LinkedList();
         int[] data = new int[4];
         int count =0;
@@ -13,6 +13,7 @@ public class AnswerGenerator {
             int random=(int)(Math.random()*10);
             if(!list.contains(random)){
                 data[count]=random;
+                list.add(random);
                 count++;
             }
         }
