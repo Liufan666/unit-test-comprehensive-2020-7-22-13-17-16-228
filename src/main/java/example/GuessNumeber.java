@@ -59,6 +59,11 @@ public class GuessNumeber {
     }
 
     public boolean isInRange(int[] answer) {
-        return false;
+        for(int number:answer){
+            if(number<1 || number>9){
+                return false;
+            }
+        }
+        return true;
     }
 }
