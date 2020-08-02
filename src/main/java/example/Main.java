@@ -16,9 +16,9 @@ public class Main {
                 a[j] = Integer.parseInt(arr[j]);
 
             }
-            GuessNumebr guessNumebr = new GuessNumebr(new AnswerGenerator());
-            if(guessNumebr.isLegal(a)){
-                System.out.println(guessNumebr.guess(a));
+            GuessNumeber guessNumeber = new GuessNumeber(new AnswerGenerator());
+            if(guessNumeber.isLegal(a)){
+                System.out.println(guessNumeber.guess(a));
             }
             else {
                 System.out.println("Wrong Input，Input again");

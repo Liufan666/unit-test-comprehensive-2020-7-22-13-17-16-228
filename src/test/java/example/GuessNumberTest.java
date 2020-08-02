@@ -16,10 +16,10 @@ public class GuessNumberTest {
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
 
         when(answerGenerator.generate()).thenReturn(answer);
-        GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
+        GuessNumeber guessNumeber = new GuessNumeber(answerGenerator);
         int[] inputGuess = {1,2,3,4};
         //when
-        String result = guessNumebr.guess(inputGuess);
+        String result = guessNumeber.guess(inputGuess);
         //then
         assertEquals("4A0B",result);
     }
@@ -31,10 +31,10 @@ public class GuessNumberTest {
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
 
         when(answerGenerator.generate()).thenReturn(answer);
-        GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
+        GuessNumeber guessNumeber = new GuessNumeber(answerGenerator);
         int[] inputGuess = {5,6,7,8};
         //when
-        String result = guessNumebr.guess(inputGuess);
+        String result = guessNumeber.guess(inputGuess);
         //then
         assertEquals("0A0B",result);
     }
@@ -46,10 +46,10 @@ public class GuessNumberTest {
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
 
         when(answerGenerator.generate()).thenReturn(answer);
-        GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
+        GuessNumeber guessNumeber = new GuessNumeber(answerGenerator);
         int[] inputGuess = {1,2,5,6};
         //when
-        String result = guessNumebr.guess(inputGuess);
+        String result = guessNumeber.guess(inputGuess);
         //then
         assertEquals("2A0B",result);
     }
@@ -61,10 +61,10 @@ public class GuessNumberTest {
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
 
         when(answerGenerator.generate()).thenReturn(answer);
-        GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
+        GuessNumeber guessNumeber = new GuessNumeber(answerGenerator);
         int[] inputGuess = {4,3,2,1};
         //when
-        String result = guessNumebr.guess(inputGuess);
+        String result = guessNumeber.guess(inputGuess);
         //then
         assertEquals("0A4B",result);
     }
@@ -76,10 +76,10 @@ public class GuessNumberTest {
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
 
         when(answerGenerator.generate()).thenReturn(answer);
-        GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
+        GuessNumeber guessNumeber = new GuessNumeber(answerGenerator);
         int[] inputGuess = {1,2,4,3};
         //when
-        String result = guessNumebr.guess(inputGuess);
+        String result = guessNumeber.guess(inputGuess);
         //then
         assertEquals("2A2B",result);
     }
@@ -91,10 +91,10 @@ public class GuessNumberTest {
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
 
         when(answerGenerator.generate()).thenReturn(answer);
-        GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
+        GuessNumeber guessNumeber = new GuessNumeber(answerGenerator);
         int[] inputGuess = {1,3,5,7};
         //when
-        String result = guessNumebr.guess(inputGuess);
+        String result = guessNumeber.guess(inputGuess);
         //then
         assertEquals("1A1B",result);
     }
@@ -105,10 +105,10 @@ public class GuessNumberTest {
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
 
         when(answerGenerator.generate()).thenReturn(answer);
-        GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
+        GuessNumeber guessNumeber = new GuessNumeber(answerGenerator);
         int[] inputGuess = {1,2,3,4};
         //when
-        boolean result = guessNumebr.isLegal(inputGuess);
+        boolean result = guessNumeber.isLegal(inputGuess);
         //then
         assertTrue(result);
     }
@@ -119,10 +119,10 @@ public class GuessNumberTest {
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
 
         when(answerGenerator.generate()).thenReturn(answer);
-        GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
+        GuessNumeber guessNumeber = new GuessNumeber(answerGenerator);
         int[] inputGuess = {1,2,3};
         //when
-        boolean result = guessNumebr.isLegal(inputGuess);
+        boolean result = guessNumeber.isLegal(inputGuess);
         //then
         assertFalse(result);
     }
@@ -133,10 +133,10 @@ public class GuessNumberTest {
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
 
         when(answerGenerator.generate()).thenReturn(answer);
-        GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
+        GuessNumeber guessNumeber = new GuessNumeber(answerGenerator);
         int[] inputGuess = {1,2,3,3};
         //when
-        boolean result = guessNumebr.isLegal(inputGuess);
+        boolean result = guessNumeber.isLegal(inputGuess);
         //then
         assertFalse(result);
     }
@@ -145,9 +145,9 @@ public class GuessNumberTest {
         //given
         AnswerGenerator answerGenerator = new AnswerGenerator();
         int[] answer = answerGenerator.generate();
-        GuessNumebr guessNumebr = new GuessNumebr(answerGenerator);
+        GuessNumeber guessNumeber = new GuessNumeber(answerGenerator);
         //when
-        boolean result = guessNumebr.isLegal(answer);
+        boolean result = guessNumeber.isLegal(answer);
         //then
         assertTrue(result);
     }
