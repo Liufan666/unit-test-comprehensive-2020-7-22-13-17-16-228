@@ -11,32 +11,32 @@ public class GuessNumeber {
     }
 
     public String guess(int[] inputGuess) {
-        return String.format("%sA%sB",getAcountOfA(inputGuess),(getAcountOfB(inputGuess) - getAcountOfA(inputGuess)));
+        return String.format("%sA%sB", getAmountOfSameLocation(inputGuess),(getAmountOfSameValue(inputGuess) - getAmountOfSameLocation(inputGuess)));
     }
 
-    public int getAcountOfB(int[] inputGuess) {//todo
-        List list = new LinkedList();//todo
-        int accountOfB = 0;
+    public int getAmountOfSameValue(int[] inputGuess) {
+        List list = new LinkedList();
+        int amountOfSameValue = 0;
         for (int index = 0; index < answer.length; index++) {
             list.add(answer[index]);//todo Arrays.asList
         }
         for (int index = 0; index < inputGuess.length; index++) {
             if (list.contains(inputGuess[index])) {
-                accountOfB++;
+                amountOfSameValue++;
             }
         }
-        return accountOfB;
+        return amountOfSameValue;
 
     }
 
-    public int getAcountOfA(int[] inputGuess) {
-        int accountOfA = 0;
+    public int getAmountOfSameLocation(int[] inputGuess) {
+        int amountOfSameLocation = 0;
         for (int index = 0; index < (Math.min(inputGuess.length, answer.length)); index++) {//todo
             if (inputGuess[index] == answer[index]) {
-                accountOfA++;
+                amountOfSameLocation++;
             }
         }
-        return accountOfA;
+        return amountOfSameLocation;
     }
 
     public boolean isLegal(int[] inputGuess) {
