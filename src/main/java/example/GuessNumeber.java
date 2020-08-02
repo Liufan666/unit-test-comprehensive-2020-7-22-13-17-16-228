@@ -11,9 +11,7 @@ public class GuessNumeber {
     }
 
     public String guess(int[] inputGuess) {
-        String result = "";
-        result = getAcountOfA(inputGuess) + "A" + (getAcountOfB(inputGuess) - getAcountOfA(inputGuess)) + "B";
-        return result;//todo
+        return String.format("%sA%sB",getAcountOfA(inputGuess),(getAcountOfB(inputGuess) - getAcountOfA(inputGuess)));
     }
 
     public int getAcountOfB(int[] inputGuess) {//todo
