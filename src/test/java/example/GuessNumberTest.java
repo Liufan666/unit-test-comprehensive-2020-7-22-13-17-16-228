@@ -152,4 +152,16 @@ public class GuessNumberTest {
         assertTrue(result);
     }
 
+    @Test
+    void should_return_true_when_isInRange_given_answer_by_generate(){
+        //given
+        AnswerGenerator answerGenerator = new AnswerGenerator();
+        int[] answer = answerGenerator.generate();
+        GuessNumeber guessNumeber = new GuessNumeber(answerGenerator);
+        //when
+        boolean result = guessNumeber.isInRange(answer);
+        //then
+        assertTrue(result);
+    }
+
 }

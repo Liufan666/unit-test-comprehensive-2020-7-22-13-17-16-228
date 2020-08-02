@@ -18,7 +18,7 @@ public class GuessNumeber {
         List list = new LinkedList();
         int amountOfSameValue = 0;
         for (int index = 0; index < answer.length; index++) {
-            list.add(answer[index]);//todo Arrays.asList
+            list.add(answer[index]);
         }
         for (int index = 0; index < inputGuess.length; index++) {
             if (list.contains(inputGuess[index])) {
@@ -31,7 +31,7 @@ public class GuessNumeber {
 
     public int getAmountOfSameLocation(int[] inputGuess) {
         int amountOfSameLocation = 0;
-        for (int index = 0; index < (Math.min(inputGuess.length, answer.length)); index++) {//todo
+        for (int index = 0; index < (Math.min(inputGuess.length, answer.length)); index++) {
             if (inputGuess[index] == answer[index]) {
                 amountOfSameLocation++;
             }
@@ -58,4 +58,7 @@ public class GuessNumeber {
         return false;
     }
 
+    public boolean isInRange(int[] answer) {
+        return false;
+    }
 }

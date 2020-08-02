@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class AnswerGenerator {
-    public int[] generate() {//todo
+    public int[] generate() {
         List list = new LinkedList();
         int[] data = new int[4];
         int count =0;
