@@ -48,12 +48,12 @@ public class GuessNumeber {
     }
 
     public boolean isRepeat(int[] inputGuess) {
-        for (int index1 = 0; index1 < inputGuess.length - 1; index1++) {//todo hashest
-            for (int index2 = index1 + 1; index2 < inputGuess.length; index2++) {
-                if (inputGuess[index1] == inputGuess[index2]) {
-                    return true;
-                }
-            }
+        HashSet hashSet = new HashSet();
+        for(int number:inputGuess){
+            hashSet.add(number);
+        }
+        if(hashSet.size()<inputGuess.length){
+            return true;
         }
         return false;
     }
