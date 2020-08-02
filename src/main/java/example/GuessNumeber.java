@@ -43,7 +43,10 @@ public class GuessNumeber {
 
     public boolean isLegal(int[] inputGuess) {
 
-        return inputGuess.length == 4 && !isRepeat(inputGuess);
+        return isLengthValid(inputGuess) && !isRepeat(inputGuess);
+    }
+    public boolean isLengthValid(int[] inputGuess){
+        return inputGuess.length == 4;
     }
 
     public boolean isRepeat(int[] inputGuess) {
