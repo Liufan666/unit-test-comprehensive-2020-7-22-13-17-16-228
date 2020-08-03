@@ -12,4 +12,11 @@ public class InputGuessNumber {
         }
         return arrayInt;
     }
+
+    public static boolean isWin(int[] input, GuessNumber guessNumber) {
+        if (guessNumber.guess(input) == "4A0B") {
+            return true;
+        }
+        return false;
+    }
 }
