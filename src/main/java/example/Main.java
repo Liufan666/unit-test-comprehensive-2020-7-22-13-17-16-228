@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {//todo
         Scanner sc = new Scanner(System.in);
+        GuessNumber guessNumber = new GuessNumber(new AnswerGenerator());
         for (int time = 0; time < 6; time++) {
             String str = sc.nextLine().toString();
             String arr[] = str.split(" ");
@@ -12,7 +13,7 @@ public class Main {
             for (int j = 0; j < a.length; j++) {
                 a[j] = Integer.parseInt(arr[j]);
             }
-            GuessNumber guessNumber = new GuessNumber(new AnswerGenerator());
+
             if (guessNumber.isLegal(a)) {
                 System.out.println(guessNumber.guess(a));
             } else {
