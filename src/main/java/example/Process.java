@@ -14,7 +14,7 @@ public class Process {
         }
     }
 
-    public boolean isEnd(int[] input,GuessNumber guessNumber){
+    public boolean isEnd(int[] input, GuessNumber guessNumber) {
         return InputGuessNumber.isWin(input, guessNumber);
     }
 
@@ -22,16 +22,14 @@ public class Process {
         int[] inputGuess;
         for (int time = 0; time < GAME_TIMES; time++) {
             inputGuess = InputGuessNumber.getInput(scanner);
-            outGuessResult(inputGuess,guessNumber);
-            if(isEnd(inputGuess,guessNumber)){
+            outGuessResult(inputGuess, guessNumber);
+            if (isEnd(inputGuess, guessNumber)) {
                 System.out.println("you win");
                 System.exit(0);
             }
         }
         System.out.println("you lose");
     }
-
-
 
 
 }
