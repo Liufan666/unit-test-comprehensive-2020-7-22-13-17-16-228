@@ -3,10 +3,10 @@ package example;
 
 import java.util.*;
 
-public class GuessNumeber {
+public class GuessNumber {
     private int[] answer;
 
-    public GuessNumeber(AnswerGenerator answerGenerator) {
+    public GuessNumber(AnswerGenerator answerGenerator) {
         this.answer = answerGenerator.generate();
     }
 
