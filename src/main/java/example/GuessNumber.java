@@ -11,7 +11,7 @@ public class GuessNumber {
     }
 
     public String guess(int[] inputGuess) {
-        return String.format("%sA%sB", getAmountOfSameLocation(inputGuess),(getAmountOfSameValue(inputGuess) - getAmountOfSameLocation(inputGuess)));
+        return String.format("%sA%sB", getAmountOfSameLocation(inputGuess), (getAmountOfSameValue(inputGuess) - getAmountOfSameLocation(inputGuess)));
     }
 
     public int getAmountOfSameValue(int[] inputGuess) {
@@ -39,31 +39,4 @@ public class GuessNumber {
         return amountOfSameLocation;
     }
 
-    public boolean isLegal(int[] inputGuess) {
-
-        return isLengthValid(inputGuess) && !isRepeat(inputGuess);
-    }
-    public boolean isLengthValid(int[] inputGuess){
-        return inputGuess.length == 4;
-    }
-
-    public boolean isRepeat(int[] inputGuess) {
-        HashSet hashSet = new HashSet();
-        for(int number:inputGuess){
-            hashSet.add(number);
-        }
-        if(hashSet.size()<inputGuess.length){
-            return true;
-        }
-        return false;
-    }
-
-    public boolean isInRange(int[] answer) {
-        for(int number:answer){
-            if(number<1 || number>9){
-                return false;
-            }
-        }
-        return true;
-    }
 }

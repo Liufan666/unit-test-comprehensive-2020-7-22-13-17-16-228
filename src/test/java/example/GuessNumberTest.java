@@ -103,12 +103,12 @@ public class GuessNumberTest {
         //given
         int[] answer = {1,2,3,4};
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
-
+        Validator validator = new Validator();
         when(answerGenerator.generate()).thenReturn(answer);
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         int[] inputGuess = {1,2,3,4};
         //when
-        boolean result = guessNumber.isLegal(inputGuess);
+        boolean result = validator.isLegal(inputGuess);
         //then
         assertTrue(result);
     }
@@ -117,12 +117,12 @@ public class GuessNumberTest {
         //given
         int[] answer = {1,2,3,4};
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
-
+        Validator validator = new Validator();
         when(answerGenerator.generate()).thenReturn(answer);
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         int[] inputGuess = {1,2,3};
         //when
-        boolean result = guessNumber.isLegal(inputGuess);
+        boolean result = validator.isLegal(inputGuess);
         //then
         assertFalse(result);
     }
@@ -131,12 +131,12 @@ public class GuessNumberTest {
         //given
         int[] answer = {1,2,3,4};
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
-
+        Validator validator = new Validator();
         when(answerGenerator.generate()).thenReturn(answer);
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         int[] inputGuess = {1,2,3,3};
         //when
-        boolean result = guessNumber.isLegal(inputGuess);
+        boolean result = validator.isLegal(inputGuess);
         //then
         assertFalse(result);
     }
@@ -146,8 +146,9 @@ public class GuessNumberTest {
         AnswerGenerator answerGenerator = new AnswerGenerator();
         int[] answer = answerGenerator.generate();
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
+        Validator validator = new Validator();
         //when
-        boolean result = guessNumber.isLegal(answer);
+        boolean result = validator.isLegal(answer);
         //then
         assertTrue(result);
     }
@@ -158,8 +159,9 @@ public class GuessNumberTest {
         AnswerGenerator answerGenerator = new AnswerGenerator();
         int[] answer = answerGenerator.generate();
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
+        Validator validator = new Validator();
         //when
-        boolean result = guessNumber.isInRange(answer);
+        boolean result = validator.isInRange(answer);
         //then
         assertTrue(result);
     }
